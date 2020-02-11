@@ -10,10 +10,9 @@ from display import *
 
 def draw_line( x0, y0, x1, y1, screen, color ):
     slope = (y1-y0) / (x1-x0)
-    if (slope >= 0):
-        if (min(x0,x1) == x1):
-            x0,x1 = x1,x0
-            y0,y1 = y1,y0
+    if (min(x0,x1) == x1):
+        x0,x1 = x1,x0
+        y0,y1 = y1,y0
     currentx = x0
     currenty = y0
 
@@ -29,7 +28,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         #midpoint times 2
         d2 = 2 * a + b
         #loop to make line
-        while currentx <= sx:
+        while currentx <= x1:
             plot(screen,color,currentx,currenty)
             d0 = 2*a*(currentx+1) + 2*b*(currenty+1) + c
             if abs(d0) < abs(d2):
@@ -43,7 +42,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         #midpoint times 2
         d2 = 2 * b + a
         #loop to make line
-        while currenty <= sy:
+        while currenty <= y1:
             plot(screen,color,currentx,currenty)
             d0 = 2*a*(currentx+1) + 2*b*(currenty+1) + c
             if abs(d0) < abs(d2):

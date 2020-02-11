@@ -28,5 +28,5 @@ def draw_line( x0, y0, x1, y1, screen, color ):
             if abs(d0) < abs(d2):
                 currenty += 1
                 d2 += (2*b)
-                currentx += 1
-                d2 += (2*a)
+            currentx += 1
+            d2 += (2*a)

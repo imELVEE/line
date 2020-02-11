@@ -23,7 +23,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
     #OCTANT 1 AND 5
     if (0 <= slope and slope <= 1):
         #midpoint times 2
-        d2 = 2 * a + b
+        #d2 = 2 * a + b
         #loop to make line
         """
         if (currentx >= x1):
@@ -36,8 +36,9 @@ def draw_line( x0, y0, x1, y1, screen, color ):
                 d2 += (2*b)
             currentx += 1
             d2 += (2*a)
-            """
+        """
         if (currentx <= x1):
+            d2 = 2 * a + b
             while currentx <= x1:
                 plot(screen,color,currentx,currenty)
                 d0 = 2*a*(currentx+1) + 2*b*(currenty+1) + c
@@ -47,6 +48,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
                 currentx += 1
                 d2 += (2*a)
         else:
+            d2 = 2 * a - b
             while currentx >= x1:
                 plot(screen,color,currentx,currenty)
                 d0 = 2*a*(currentx-1) + 2*b*(currenty-1) + c

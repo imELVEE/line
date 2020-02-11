@@ -10,7 +10,7 @@ from display import *
 
 def draw_line( x0, y0, x1, y1, screen, color ):
     slope = (y1-y0) / (x1-x0)
-    if (min(x0,x1) == x1):
+    if (min([x0,x1]) == x1):
         x0,x1 = x1,x0
         y0,y1 = y1,y0
     currentx = x0

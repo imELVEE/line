@@ -18,6 +18,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
     b = -1 * (x1 - x0)
     c = b * ((a / b) * (0 - x0) + y0)
 
+    #OCTANT 1 AND 5
     if (0 <= slope and slope <= 1):
         #midpoint times 2
         d2 = 2 * a + b
@@ -30,3 +31,17 @@ def draw_line( x0, y0, x1, y1, screen, color ):
                 d2 += (2*b)
             currentx += 1
             d2 += (2*a)
+
+    #OCTANT 2 AND 6
+    elif (1 < slope and b = 0):
+        #midpoint times 2
+        d2 = 2 * b + a
+        #loop to make line
+        while currenty <= y1:
+            plot(screen,color,currentx,currenty)
+            d0 = 2*a*(currentx+1) + 2*b*(currenty+1) + c
+            if abs(d0) < abs(d2):
+                currentx += 1
+                d2 += (2*a)
+            currenty += 1
+            d2 += (2*b)

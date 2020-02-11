@@ -18,10 +18,11 @@ def draw_line( x0, y0, x1, y1, screen, color ):
     #Ax + By + C = 0
     a = y1 - y0
     b = -1 * (x1 - x0)
-    c = -1 * b * ((a / b) * (0 - x0) + y0)
+    c = None
 
     if (b != 0):
         slope = (y1-y0) / (x1-x0)
+        c = -1 * b * ((a / b) * (0 - x0) + y0)
 
     if (a == 0):
         while currentx <= x1:

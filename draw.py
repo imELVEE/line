@@ -25,7 +25,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         #midpoint times 2
         d2 = 2 * a + b
         #loop to make line
-        """
+
         if (currentx >= x1):
             draw_line( int(x1), int(y1), x0, y0, screen, color )
         while currentx <= x1:
@@ -57,7 +57,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
                     d2 -= (2*b)
                 currentx -= 1
                 d2 -= (2*a)
-
+"""
     #OCTANT 2 AND 6
     elif (1 <= slope):
         #midpoint times 2

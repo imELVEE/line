@@ -26,7 +26,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         d2 = 2 * a + b
         #loop to make line
         if (currentx >= x1):
-            draw_line( x1, y1, x0, y0, screen, color )
+            draw_line( int(x1), int(y1), int(x0), int(y0), screen, color )
         while currentx <= x1:
             plot(screen,color,currentx,currenty)
             d0 = 2*a*(currentx+1) + 2*b*(currenty+1) + c

@@ -37,7 +37,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
                 d2 += (2*b)
             currentx += 1
             d2 += (2*a)
-        """
+"""
         if (currentx <= x1):
             #d2 = 2 * a + b
             while currentx <= x1:

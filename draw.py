@@ -9,9 +9,13 @@ from display import *
 # octants 4 and 8 : -1 < m < 0
 
 def draw_line( x0, y0, x1, y1, screen, color ):
+    slope = (y1-y0) / (x1-x0)
+    if (slope >= 0):
+        if (min(x0,x1) == x1):
+            x0,x1 = x1,x0
+            y0,y1 = y1,y0
     currentx = x0
     currenty = y0
-    slope = (y1-y0) / (x1-x0)
 
     #mx - y + b = 0
     #deltay x - dealtax y + deltax b = 0

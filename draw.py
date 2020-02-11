@@ -40,7 +40,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
             currentx =  0
             currenty = 0
             while currentx <= x0:
-                plot(screen,color,currentx+int(x1),currenty+int(y1))
+                plot(screen,color,currentx+x1,currenty+y1)
                 d0 = 2*a*(currentx+1) + 2*b*(currenty+1) + c
                 if abs(d0) < abs(d2):
                     currenty += 1

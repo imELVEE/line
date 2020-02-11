@@ -25,19 +25,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
         #midpoint times 2
         d2 = 2 * a + b
         #loop to make line
-"""
-        if (currentx >= x1):
-            x0,x1 = x1,x0
-            
-        while currentx <= x1:
-            plot(screen,color,currentx,currenty)
-            d0 = 2*a*(currentx+1) + 2*b*(currenty+1) + c
-            if abs(d0) < abs(d2):
-                currenty += 1
-                d2 += (2*b)
-            currentx += 1
-            d2 += (2*a)
-"""
+
         if (currentx <= x1):
             #d2 = 2 * a + b
             while currentx <= x1:

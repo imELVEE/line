@@ -13,9 +13,11 @@ def draw_line( x0, y0, x1, y1, screen, color ):
     currenty = y0
     slope = (y1-y0) / (x1-x0)
 
+    #mx - y + b = 0
+    #deltay x - dealtax y + deltax b = 0
     #Ax + By + C = 0
-    a = y1 - y0
-    b = -1 * (x1 - x0)
+    a = y0 - y1
+    b = -1 * (x0 - x1)
     c = b * ((a / b) * (0 - x0) + y0)
 
     #OCTANT 1 AND 5
@@ -47,9 +49,9 @@ def draw_line( x0, y0, x1, y1, screen, color ):
             d2 += (2*b)
 
     #OCTANT 3 AND 7
-    elif (slope < -1):
+    elif (slope <= -1):
         #midpoint times 2
-        d2 = 2 * b + a
+        d2 = 2 * b - a
         #loop to make line
         while currenty >= y1:
             plot(screen,color,currentx,currenty)

@@ -9,9 +9,7 @@ from display import *
 # octants 4 and 8 : -1 < m < 0
 
 def draw_line( x0, y0, x1, y1, screen, color ):
-    currentx = x0
-    currenty = y0
-    slope = (y1-y0) / (x1-x0)
+    slope = (y0-y1) / (x0-x1)
 
     #mx - y + b = 0
     #deltay x - dealtax y + deltax b = 0
@@ -22,6 +20,12 @@ def draw_line( x0, y0, x1, y1, screen, color ):
 
     #OCTANT 1 AND 5
     if (0 <= slope and slope <= 1):
+        if (min(x0,x1) == x0):
+            currentx = x0
+            currenty = y0
+        else:
+            currentx = x1
+            currenty = y1
         #midpoint times 2
         d2 = 2 * a + b
         #loop to make line
@@ -36,6 +40,12 @@ def draw_line( x0, y0, x1, y1, screen, color ):
 
     #OCTANT 2 AND 6
     elif (1 <= slope):
+        if (min(x0,x1) == x0):
+            currentx = x0
+            currenty = y0
+        else:
+            currentx = x1
+            currenty = y1
         #midpoint times 2
         d2 = 2 * b + a
         #loop to make line

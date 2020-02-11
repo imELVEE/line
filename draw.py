@@ -9,7 +9,7 @@ from display import *
 # octants 4 and 8 : -1 < m < 0
 
 def draw_line( x0, y0, x1, y1, screen, color ):
-    slope = (y1-y0) / (x1-x0)
+    slope
     currentx = x0
     currenty = y0
 
@@ -19,6 +19,9 @@ def draw_line( x0, y0, x1, y1, screen, color ):
     a = y1 - y0
     b = -1 * (x1 - x0)
     c = -1 * b * ((a / b) * (0 - x0) + y0)
+
+    if (b != 0):
+        slope = (y1-y0) / (x1-x0)
 
     if (a == 0):
         while currentx <= x1:

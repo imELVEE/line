@@ -33,7 +33,7 @@ def draw_line( x0, y0, x1, y1, screen, color ):
             d2 += (2*a)
 
     #OCTANT 2 AND 6
-    if (1 < slope):
+elif (1 <= slope):
         #midpoint times 2
         d2 = 2 * b + a
         #loop to make line

@@ -22,11 +22,11 @@ def draw_line( x0, y0, x1, y1, screen, color ):
 
     if (a == 0):
         while currentx <= x1:
-            plot(screen,color,currentx,currenty)
+            plot(screen,color,int(currentx),int(currenty))
             currentx += 1
     elif (b == 0):
         while currenty <= y1:
-            plot(screen,color,currentx,currenty)
+            plot(screen,color,int(currentx),int(currenty))
             currenty += 1
 
     #OCTANT 1 AND 5
